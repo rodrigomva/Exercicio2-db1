@@ -1,0 +1,32 @@
+<div class="container">
+    <h4>Detalhes do Usuário</h4>
+    <hr>
+    <p><strong>ID:</strong> {{user.id}}</p>
+    <p><strong>Login:</strong> {{user.login}}</p>
+    <p><strong>URL:</strong> <a href={{user.html_url}}>{{user.html_url}}</a></p>
+    <p><strong>Data de Cadastro:</strong> {{user.created_at | date: 'dd/MM/yyyy'}}</p>
+    <hr>
+    <h4>Repositórios</h4>
+    <table class="center mdl-data-table mdl-js-data-table mdl-shadow--2dp">
+        <thead>
+            <tr>
+                <th class="mdl-data-table__cell--non-numeric">ID</th>
+                <th class="mdl-data-table__cell--non-numeric">Nome</th>
+                <th class="mdl-data-table__cell--non-numeric">URL</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let repo of listRepos">
+                <td class="mdl-data-table__cell--non-numeric">{{repo.id}}</td>
+                <td class="mdl-data-table__cell--non-numeric">{{repo.name}}</td>
+                <td class="mdl-data-table__cell--non-numeric">
+                    <a href={{repo.html_url}}>
+                        <div>
+                            {{repo.html_url}}
+                        </div>
+                    </a>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>

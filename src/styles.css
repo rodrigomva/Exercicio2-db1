@@ -1,0 +1,18 @@
+.container{
+  background-color:whitesmoke;
+}
+
+h4, p{
+  text-align: center;
+}
+
+
+body {
+  background-color:whitesmoke;
+}
+
+table.center {
+    margin-left:auto; 
+    margin-right:auto;
+    width: 70%;
+}

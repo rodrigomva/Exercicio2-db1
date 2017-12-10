@@ -1,0 +1,25 @@
+<div class="container">
+    <h4>Lista de Usuários do GitHub</h4>
+    <hr>
+    <table class="center mdl-data-table mdl-js-data-table mdl-data-table--selectable mdl-shadow--2dp">
+        <thead>
+            <tr>
+                <th class="mdl-data-table__cell--non-numeric">Id</th>
+                <th class="mdl-data-table__cell--non-numeric">Login</th>
+                <th></th>
+
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let user of list">
+
+                <td class="mdl-data-table__cell--non-numeric">{{user.id}}</td>
+                <td class="mdl-data-table__cell--non-numeric">{{user.login}}</td>
+                <td>
+                    <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored" [routerLink]="['/usuarios/detalhe', user.login]"><strong>Detalhes</strong></button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <p>Carregando... Por favor aguarde!</p>
+</div>
